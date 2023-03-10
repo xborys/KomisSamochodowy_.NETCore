@@ -1,0 +1,38 @@
+﻿@page
+@model KomisSamochodowy.Pages.Oferta.IndexModel
+@{
+}
+
+<section class="services" id="services">
+    <div class='container p-3'>
+        <div class="row pt-4">
+            <div class="col-6">
+                <h2 class="text-primary">Nasza oferta</h2>
+            </div>
+        </div>
+
+        <br /><br />
+        
+        <div class="services-container">
+        @foreach (var obj in Model.Cars)
+        {
+                @if(@obj.availability == true)
+                {
+                <div class="box">
+                    <div class="box-img">
+                    <img src="/img/@(obj.model).png" alt="fura">
+                    </div>
+                    <p>@obj.year</p>
+                    <h3>@obj.mark @obj.model</h3>
+                    <h2>@obj.value <span>PLN/brutto</span></h2>
+                    <a class="bnt" asp-area='' asp-route-id='@obj.carID' asp-page='MoreInfo'>ZOBACZ SZCZGÓŁY</a>
+                </div>
+                }
+                
+        }
+        </div>
+
+    </div> 
+</section>
+
+

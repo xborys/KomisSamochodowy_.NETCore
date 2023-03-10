@@ -1,0 +1,48 @@
+﻿@page
+@model KomisSamochodowy.Pages.Clients.DeleteModel
+@{
+}
+
+<form method="post">
+    <input hidden asp-for="Client.clientID" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Usuń klienta</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label>Imie</label>
+            <input asp-for="Client.Name" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Nazwisko</label>
+            <input asp-for="Client.LastName" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Adres</label>
+            <input asp-for="Client.Street" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Miasto</label>
+            <input asp-for="Client.City" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Kod pocztowy</label>
+            <input asp-for="Client.PostCode" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Numer telefonu</label>
+            <input asp-for="Client.PhoneNumber" disabled class="form-control" />
+        </div> 
+        <button type="submit" class="btn btn-danger" style="width:150px">Usuń</button>
+        <a asp-page="Index" class="btn btn-secondary" style="width:150px">Powrót</a>
+    </div>
+
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+

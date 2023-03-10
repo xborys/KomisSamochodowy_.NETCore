@@ -1,0 +1,55 @@
+﻿@page
+@model KomisSamochodowy.Pages.Offer.MoreInfoModel
+@{
+}
+
+<br />
+
+<section class="MoreInfo" id="MoreInfo">
+    <div class="DaneSamochodu">
+        
+        <div class="rightsite">
+            <h1>
+                @Model.Car.mark @Model.Car.model
+            </h1>
+            <p>Id oferty: @Model.Car.carID</p>
+            <hr>
+            <table class="table table-bordered table-striped" style="width:100%">
+                <tr>
+                    <th>Marka</th>
+                    <td>@Model.Car.mark</td>
+                </tr>
+                <tr>
+                    <th>Model</th>
+                    <td>@Model.Car.model</td>
+                </tr>
+                <tr>
+                    <th>Rok produkcji</th>
+                    <td>@Model.Car.year</td>
+                </tr>
+                <tr>
+                    <th>Przebieg</th>
+                    <td>@Model.Car.odometer km</td>
+                </tr>
+                <tr>
+                    <th>Opis</th>
+                    <td>@Model.Car.description</td>
+                </tr>
+                <tr>
+                    <th>Cena</th>
+                    <td>@Model.Car.value PLN/brutto</td>
+                </tr>
+            </table>
+            <a asp-page='Sales' asp-route-id='@Model.Car.carID' class="btn btn-primary">
+                <i class="bi bi-cart-check-fill"></i> &nbsp; Sprzedaż
+            </a>
+            <a asp-page='Index' class="btn btn-primary">
+                <i class="bi bi-box-arrow-in-left"></i> &nbsp; Powrót
+            </a>
+        </div>
+        <div class="leftsite">     
+            <img src="/img/@(Model.Car.model).png" alt="fura">
+        </div>
+    </div> 
+
+</section>

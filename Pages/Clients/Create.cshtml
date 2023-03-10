@@ -1,0 +1,52 @@
+﻿@page
+@model KomisSamochodowy.Pages.Clients.CreateModel
+@{
+}
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Dodaj klienta</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label>Imie</label>
+            <input asp-for="client.Name" class="form-control" />
+            <span asp-validation-for="client.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Nazwisko</label>
+            <input asp-for="client.LastName" class="form-control" />
+            <span asp-validation-for="client.LastName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Adres</label>
+            <input asp-for="client.Street" class="form-control" />
+            <span asp-validation-for="client.Street" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Miasto</label>
+            <input asp-for="client.City" class="form-control" />
+            <span asp-validation-for="client.City" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Kod pocztowy</label>
+            <input asp-for="client.PostCode" class="form-control" />
+            <span asp-validation-for="client.PostCode" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Numer telefonu</label>
+            <input asp-for="client.PhoneNumber" class="form-control" />
+            <span asp-validation-for="client.PhoneNumber" class="text-danger"></span>
+        </div> 
+        <button type="submit" class="btn btn-primary" style="width:150px">Dodaj</button>
+        <a asp-page="Index" class="btn btn-secondary" style="width:150px">Powrót</a>
+    </div>
+
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

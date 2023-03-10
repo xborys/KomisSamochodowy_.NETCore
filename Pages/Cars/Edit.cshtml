@@ -1,0 +1,61 @@
+﻿@page
+@model KomisSamochodowy.Pages.Cars.EditModel
+@{
+}
+
+<form method="post">
+    <input hidden asp-for="Car.carID" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Edytuj dane samochodu</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label>Marka</label>
+            <input asp-for='Car.mark' class="form-control" />
+            <span asp-validation-for="Car.mark" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Model</label>
+            <input asp-for='Car.model' class="form-control" />
+            <span asp-validation-for="Car.model" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Rok produkcji</label>
+            <input asp-for='Car.year' class="form-control" />
+            <span asp-validation-for="Car.year" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Przebieg</label>
+            <input asp-for='Car.odometer' class="form-control" />
+            <span asp-validation-for="Car.odometer" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Dostępność</label>
+            <select asp-for='Car.availability' class="form-control">
+                <option>true</option>
+                <option>false</option>
+            </select>
+            <span asp-validation-for="Car.availability" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Cena</label>
+            <input asp-for='Car.value' class="form-control" />
+            <span asp-validation-for="Car.value" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label>Opis</label>
+            <input asp-for='Car.description' class="form-control" />
+            <span asp-validation-for="Car.description" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Edytuj</button>
+        <a asp-page="Index" class="btn btn-secondary" style="width:150px">Powrót</a>
+    </div>
+
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,51 @@
+:root{
+  --main-color: #fe5b3d;
+  --second-color: #ffac38;
+  --text-color: #444;
+  --gradient: linear-gradient(#fe5b3d, #ffac38);
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: reoeat(2,1fr);
+}
+
+.text h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+.text span {
+    color: var(--main-color);
+}
+
+.text margin {
+    margin: 00.5rem 0 1rem;
+}
